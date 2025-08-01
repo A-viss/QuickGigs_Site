@@ -76,7 +76,7 @@ nav a.now {
   display: flex;
   border-radius: 25px;
   transition: transform 0.5s ease;
-  
+
 }
 
 #WhoWeAre:hover {
@@ -408,24 +408,64 @@ footer p {
 
 @media (max-width: 1024px) {
 
-    header {
-        flex-direction: column;
-        align-items: center;
-        width: 90%;
-        padding: 5px;
-    }
-
-    #logo {
-        margin: 5px auto;
-    }
-
-    nav {
-        flex-wrap: wrap;
-        justify-content: center;
-        margin: 5px 0;
-    }
-
-    nav a {
-        font-size: 18px;
-    }
+  header {
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    padding: 5px;
   }
+
+  #logo {
+    margin: 5px auto;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 5px 0;
+  }
+
+  nav a {
+    font-size: 18px;
+  }
+
+  #WhoWeAre #left {
+    display: none;
+  }
+
+  #WhoWeAre #right {
+    width: 100%;
+  }
+
+  #status {
+  width: 76.5%;
+  display: flex;
+  flex-direction: column;
+}
+
+#team #left {
+  display: none;
+
+}
+
+#team #right {
+  width: 100%;
+  display: flex;
+  margin: 0;
+
+}
+
+#team #right .member{
+  width: 18%;
+}
+
+#contactAuth{
+  display: flex;
+  flex-direction: column;
+}
+
+#SocialMedia, #auth{
+  width: 100%;
+}
+
+}

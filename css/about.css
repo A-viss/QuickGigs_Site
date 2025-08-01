@@ -76,6 +76,7 @@ nav a.now {
   display: flex;
   border-radius: 25px;
   transition: transform 0.5s ease;
+  
 }
 
 #WhoWeAre:hover {
@@ -403,47 +404,6 @@ footer p {
   transform: translateY(0);
   pointer-events: auto;
 
-}
-
-#WhoWeAre {
-  animation-delay: 0s;
-  animation: slideUp 1.5s ease forwards;
-  will-change: transform, opacity;
-}
-
-#p1, #p2, #p3, #p4 {
-  animation-delay: 0.4s;
-  animation: slideUp 1.5s ease forwards;
-  will-change: transform, opacity;
-}
-
-#team {
-  animation-delay: 1s;
-  animation: slideUp 1.5s ease forwards;
-  will-change: transform, opacity;
-}
-
-#SocialMedia {
-  animation-delay: 1.6s;
-  animation: slideUp 1.5s ease forwards;
-  will-change: transform, opacity;
-}
-
-#auth {
-  animation-delay: 2.2s;
-  animation: slideUp 1.5s ease forwards;
-  will-change: transform, opacity;
-}
-
-@keyframes slideUp {
-  0% {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 @media (max-width: 1024px) {

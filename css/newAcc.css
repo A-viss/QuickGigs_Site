@@ -1,4 +1,4 @@
-body{
+body {
     margin: 0;
     padding: 0;
     font-family: inter;
@@ -9,7 +9,7 @@ body{
     background-position: center;
 }
 
-#login_BG{
+#login_BG {
     width: 60%;
     height: 75%;
     position: absolute;
@@ -36,23 +36,23 @@ body{
     object-fit: cover;
 }
 
-#left_Items{
+#left_Items {
     position: absolute;
     top: 20px;
     left: 20px;
 
 }
 
-#left_Items img{
+#left_Items img {
     width: 50%;
 }
 
-#left_Items font{
+#left_Items font {
     font-weight: bold;
     font-size: large;
     line-height: 30px;
     color: white;
-    filter: drop-shadow(0 0 2px rgb(0,0,0));
+    filter: drop-shadow(0 0 2px rgb(0, 0, 0));
 
 }
 
@@ -62,20 +62,20 @@ body{
     object-fit: cover;
 }
 
-form{
+form {
     padding: 20px 75px;
 }
 
-h3{
+h3 {
     margin: 0;
 }
 
-label{
+label {
     font-weight: 400;
     color: #001233;
 }
 
-input{
+input {
     width: 100%;
     padding: 2px;
     font-size: 20px;
@@ -86,21 +86,22 @@ input{
 
 input:focus {
     outline: none;
-    border: 2px solid #001233; 
+    border: 2px solid #001233;
 }
 
-p{
+p {
     font-size: 12px;
     color: #5C677D;
 }
 
-#submit{
+#submit {
     font-size: 17px;
     font-family: inter;
     width: 100%;
     padding: 8px;
     background-color: #001233;
     color: white;
+    border: none;
     border-radius: 5px;
     text-decoration: none;
     font-weight: 600;
@@ -111,7 +112,7 @@ p{
     background-color: #5C677D;
 }
 
-section{
+section {
     margin-top: 1px;
     margin-bottom: 10px;
     font-size: 10px;
@@ -122,13 +123,35 @@ section{
 }
 
 input.valid {
-  border: 1px solid #2dc653;
+    border: 1px solid #2dc653;
 }
 
 input.invalid {
-  border: 1px solid #ef233c;
+    border: 1px solid #ef233c;
 }
 
+#Backbtn {
+    display: inline-block;
+    font-size: 17px;
+    font-family: inter;
+    width: 100%;
+    text-align: center;
+    background-color: transparent;
+    color: #ba324f;
+    border: 3px solid #ba324f;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 8px 0;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+
+}
+
+#Backbtn:hover{
+    background-color: #ba324f;
+    color: white;
+}
 
 
 #termsModal {
@@ -174,26 +197,36 @@ input.invalid {
     margin-bottom: 20px;
 }
 
-#terms hr{
+#terms hr {
     width: 95%;
     color: #5C677D;
 }
 
 @media (max-width: 1024px) {
 
-    #left{
+    #left {
         display: none;
     }
 
-    #right{
+    #right {
         width: 100%;
     }
 
+    #terms{
+        width: 70%;
     }
 
-@media (max-width: 640px){
-    form{
+
+
+}
+
+@media (max-width: 640px) {
+    form {
         padding: 10px 20px;
+    }
+
+    #terms{
+        width: 75%;
     }
 
 }

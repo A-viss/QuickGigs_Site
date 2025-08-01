@@ -45,3 +45,7 @@ function submitTask(index) {
 
 renderTasks();
 
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+

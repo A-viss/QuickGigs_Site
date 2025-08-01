@@ -173,6 +173,23 @@ nav a.now1 {
     text-align: left;
 }
 
+#scrollBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #ba324f;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+#scrollBtn img {
+  width: 20px;
+}
+
 @media (max-width: 1024px) {
 
     header {
@@ -195,4 +212,12 @@ nav a.now1 {
     nav a {
         font-size: 18px;
     }
+
+    #taskList{
+        display: flex;
+        flex-direction: column;
+    }
+
+
+
 }

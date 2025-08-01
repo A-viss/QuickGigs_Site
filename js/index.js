@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', function () {
         errorMsg.style.display = 'none';  // hide error by default
 
         if (username === 'vismal' && password === 'Vismal80127434.') {
-            alert('Login successful!');
             window.location.href = 'homepage.html';
         } else {
             errorMsg.style.display = 'block';

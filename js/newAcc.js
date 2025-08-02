@@ -1,4 +1,7 @@
+// Fully load the html document
 document.addEventListener("DOMContentLoaded", () => {
+  
+  // storing the inputs inside a js object
   const inputs = {
     firstName: document.getElementById("First_name"),
     lastName: document.getElementById("Last_name"),
@@ -7,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     rePassword: document.getElementById("Re_Password"),
   };
 
+  // storing errors inside a js object
   const errors = {
     firstName: document.getElementById("e01"),
     lastName: document.getElementById("e02"),
@@ -15,14 +19,25 @@ document.addEventListener("DOMContentLoaded", () => {
     rePassword: document.getElementById("e05"),
   };
 
+  // storing regax inside a js object
   const regex = {
     name: /^[A-Za-z]{3,}$/,
     email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
     password: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/,
   };
 
+  // Error messages stored in an array 
+  const errorMessages = [
+    "Enter at least 3 letters.",          
+    "Enter a valid email address.",       
+    "Min 8 chars: upper, lower, number & symbol.", 
+    "Passwords do not match."              
+  ];
+
+  // js arrow functions to validate fiels
   const validateField = (input, type, key) => {
-    const value = input.value.trim();
+
+    const value = input.value.trim(); //trim the value, if any extra white spaces
     let isValid = false;
 
     if (type === "name") {
@@ -32,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else if (type === "password") {
       isValid = regex.password.test(value);
     } else if (type === "rePassword") {
-      isValid = value === inputs.password.value && value !== "";
+      isValid = value === inputs.password.value && value !== ""; // check the re enter password is not empty and match with password
     }
 
     if (!isValid) {
@@ -44,12 +59,13 @@ document.addEventListener("DOMContentLoaded", () => {
     return isValid;
   };
 
+  //  use array for error messages according to rubric
   const getErrorMessage = (type) => {
     switch (type) {
-      case "name": return "Enter at least 3 letters.";
-      case "email": return "Enter a valid email address.";
-      case "password": return "Min 8 chars: upper, lower, number & symbol.";
-      case "rePassword": return "Passwords do not match.";
+      case "name": return errorMessages[0];
+      case "email": return errorMessages[1];
+      case "password": return errorMessages[2];
+      case "rePassword": return errorMessages[3];
     }
   };
 
@@ -104,19 +120,19 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+//show the detail view of terms and conditions according to rubric
 document.addEventListener('DOMContentLoaded', () => {
   const showBtn = document.getElementById('showTerms');
   const modal = document.getElementById('termsModal');
 
   showBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    modal.style.display = 'flex';
+    modal.style.display = 'flex'; // when click show the elements in felx model
   });
 
-  // Close modal if click outside the #terms box
   modal.addEventListener('click', (e) => {
     if (e.target === modal) {
-      modal.style.display = 'none';
+      modal.style.display = 'none'; // when click outside the elements dissapear thats why use display none
     }
   });
 });

@@ -14,9 +14,10 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Trigger animations when page loads
+//  animations when page loads
 window.addEventListener('load', function () {
-  // Add a small delay to make the animation more noticeable
+  
+  // small delay
   setTimeout(() => {
     const elements = document.querySelectorAll('.fade-up, .slide-in');
     elements.forEach(element => {

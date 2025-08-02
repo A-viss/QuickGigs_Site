@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const username = document.getElementById('Username').value.trim();
         const password = document.getElementById('Password').value;
 
-        errorMsg.style.display = 'none';  // hide error by default
+        errorMsg.style.display = 'none';
 
         if (username === 'vismal' && password === 'Vismal80127434.') {
             window.location.href = 'homepage.html';

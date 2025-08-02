@@ -14,6 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+
+
 const taskList = document.getElementById('taskList');
 let gigs = JSON.parse(localStorage.getItem('pickedGigs') || '[]');
 
@@ -24,6 +26,7 @@ function renderTasks() {
         return;
     }
 
+    // for each loops render any amount off tasks
     gigs.forEach((gig, index) => {
         const div = document.createElement('div');
         div.className = 'task';
@@ -40,7 +43,7 @@ function renderTasks() {
 function submitTask(index) {
     gigs.splice(index, 1);
     localStorage.setItem('pickedGigs', JSON.stringify(gigs));
-    renderTasks();
+    renderTasks(); // remove the render when click submit
 }
 
 renderTasks();

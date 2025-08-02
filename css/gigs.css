@@ -78,6 +78,31 @@ nav a.now {
     filter: brightness(0) saturate(100%) invert(5%) sepia(55%) saturate(4787%) hue-rotate(208deg) brightness(93%) contrast(102%);
 }
 
+#filters{
+    display: flex;
+    justify-content: space-between;
+    width: 76.5%;
+    margin-bottom: 20px;
+}
+
+.filter{
+    background-color: white;
+    width: 20%;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+    color: #5C677D;
+    font-weight: 500;
+    transition: all 0.5s ease;
+
+}
+
+.filter:hover{
+    transform: scale(1.1);
+    color: #001233;
+}
 
 .gig {
     width: 76.5%;

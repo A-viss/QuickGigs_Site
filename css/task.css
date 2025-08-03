@@ -90,6 +90,13 @@ nav a.now1 {
     height: 300px;
 }
 
+#notif-bar p {
+    margin-bottom: 10px;
+    font-weight: 400;
+    color: #5C677D;
+    font-size: 15px;
+}
+
 #notif-bar.active {
     opacity: 1;
     transform: translateY(0);

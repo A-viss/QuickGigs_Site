@@ -1,6 +1,6 @@
 // to sroll to top
 function scrollToTop() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 // notification toggle according to rubric
@@ -8,18 +8,31 @@ document.addEventListener("DOMContentLoaded", () => {
     const notifBtn = document.getElementById("notif");
     const notifBar = document.getElementById("notif-bar");
 
-    if (notifBtn && notifBar) {
-        notifBtn.addEventListener("click", (e) => {
-            e.preventDefault();
-            notifBar.classList.toggle("active");
-        });
+    notifBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        notifBar.classList.toggle("active");
 
-        document.addEventListener("click", (e) => {
-            if (!notifBtn.contains(e.target) && !notifBar.contains(e.target)) {
-                notifBar.classList.remove("active");
-            }
-        });
-    }
+        // Load notifications when clicked
+        fetch("notifications.json")
+            .then(res => res.json())
+            .then(data => {
+                notifBar.innerHTML = ""; // Clear existing content
+                data.forEach(n => {
+                    const p = document.createElement("p");
+                    p.textContent = n.message;
+                    notifBar.appendChild(p);
+                });
+            })
+            .catch(() => {
+                notifBar.innerHTML = "<p>Error loading notifications</p>";
+            });
+    });
+
+    document.addEventListener("click", (e) => {
+        if (!notifBtn.contains(e.target) && !notifBar.contains(e.target)) {
+            notifBar.classList.remove("active");
+        }
+    });
 
     // filer search with arrays according to rubric
 
@@ -32,9 +45,9 @@ document.addEventListener("DOMContentLoaded", () => {
             description: 'Looking for a skilled developer to build a fully responsive e-commerce website with payment gateway integration, product catalog, shopping cart functionality, and admin dashboard. The site should be mobile-optimized with clean, modern design and fast loading times. Experience with PHP, MySQL, and JavaScript required. Will include basic SEO optimization, contact forms, and social media integration. Perfect for small to medium businesses ready to establish their online presence.',
             owner: 'Sarah Mitchell',
             contact: 'sarah.mitchell.dev@email.com',
-            price: 1200, 
+            price: 1200,
             deadlineDate: new Date('2025-08-15'), // convert dedline to date for filter
-            element: null 
+            element: null
         },
         {
             id: 'b2',
@@ -93,7 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // render gigs to order
     function renderGigs(sortedGigs) {
 
-        
+
         const container = gigElements[0]?.parentNode;
         if (!container) {
             console.error('Could not find container');
@@ -103,25 +116,25 @@ document.addEventListener("DOMContentLoaded", () => {
         // Store all elements
         const allChildren = Array.from(container.children);
         const nonGigElements = allChildren.filter(child => !child.classList.contains('gig'));
-        
+
         // Clear the container
         container.innerHTML = '';
-        
-    
+
+
         const scrollBtn = document.getElementById('scrollBtn');
         nonGigElements.forEach(element => {
             if (element !== scrollBtn) {
                 container.appendChild(element);
             }
         });
-        
+
         // Add sorted gigs
         sortedGigs.forEach(gigData => {
             if (gigData.element) {
                 container.appendChild(gigData.element);
             }
         });
-        
+
         // Add scroll button at the end
         if (scrollBtn) {
             container.appendChild(scrollBtn);
@@ -151,34 +164,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // event for filter buttons
     const filterButtons = document.querySelectorAll('.filter');
-    
+
     filterButtons.forEach(button => {
         button.addEventListener('click', (e) => {
             e.preventDefault();
-            
+
             // remove clicked css from element
             filterButtons.forEach(btn => {
                 btn.classList.remove('active');
                 btn.style.fontWeight = 'normal';
                 btn.style.color = '';
             });
-            
+
             // Add css to new clicked element
             button.classList.add('active');
             button.style.fontWeight = '700';
             button.style.color = '#001233';
-            
+
             // js switch to apply filter according to filter type
             const filterText = button.textContent.trim();
-            
-            switch(filterText) {
+
+            switch (filterText) {
                 case 'High Price':
                     sortByHighPrice();
                     break;
                 case 'Low Price':
                     sortByLowPrice();
                     break;
-                case 'Far Deadling': 
+                case 'Far Deadling':
                     sortByFarDeadline();
                     break;
                 case 'Near Deadline':
@@ -203,10 +216,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 // get from local storage
                 const pickedGigs = JSON.parse(localStorage.getItem('pickedGigs') || '[]');
-                
+
                 //add the gig to array
                 pickedGigs.push({ title, deadline, price });
-                
+
                 // save to local storage
                 localStorage.setItem('pickedGigs', JSON.stringify(pickedGigs));
 
@@ -216,7 +229,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    
+
     const scrollBtn = document.getElementById('scrollBtn');
     if (scrollBtn) {
         scrollBtn.style.display = 'block'; // always scroll button show

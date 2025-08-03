@@ -6,6 +6,7 @@ body {
 
 }
 
+/*navigation bar header*/
 header {
   display: flex;
   align-items: center;
@@ -69,6 +70,8 @@ nav a.now {
   filter: brightness(0) saturate(100%) invert(5%) sepia(55%) saturate(4787%) hue-rotate(208deg) brightness(93%) contrast(102%);
 }
 
+
+/*who we are about us*/
 #WhoWeAre {
   width: 76.5%;
   background-color: white;
@@ -106,12 +109,15 @@ nav a.now {
 }
 
 
+
+/*some analyze part*/
 #status {
   width: 76.5%;
   display: flex;
   gap: 20px;
   margin-top: 30px;
 }
+
 
 #p1,
 #p2,
@@ -123,6 +129,7 @@ nav a.now {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 }
 
+
 #p1 p,
 #p2 p,
 #p3 p,
@@ -131,6 +138,7 @@ nav a.now {
   margin-top: 20px;
 }
 
+/*progress bar*/
 .bar-container {
   display: flex;
   align-items: center;
@@ -152,6 +160,7 @@ nav a.now {
   float: left;
 }
 
+/*progress bar colors*/
 .p1-fill {
   background-color: #136f63;
 }
@@ -167,6 +176,7 @@ nav a.now {
 .p4-fill {
   background-color: #06d6a0;
 }
+
 
 .percent {
   font-weight: bold;
@@ -188,6 +198,8 @@ nav a.now {
   transform: scale(1.02);
 }
 
+
+/*team members*/
 #team {
   width: 76.5%;
   background-color: white;
@@ -264,12 +276,15 @@ h5 {
   font-weight: 400;
 }
 
+
+/*contact and autharize*/
 #contactAuth {
   width: 76.5%;
   display: flex;
   gap: 20px;
   margin-top: 30px;
 }
+
 
 #SocialMedia,
 #auth {
@@ -307,7 +322,7 @@ h5 {
 }
 
 
-#auth>div {
+#auth div {
   margin: 20px;
 }
 
@@ -317,8 +332,10 @@ h5 {
   padding-left: 10px;
 }
 
+
+/*footer section*/
 footer {
-  margin: 30px;
+  margin: 30px auto;
   width: 76.5%;
   padding: 10px;
   border-radius: 15px;
@@ -331,36 +348,7 @@ footer p {
   font-weight: bold;
 }
 
-button {
-  background-color: #ba324f;
-  padding: 10px 12px;
-  border: 0px;
-  border-radius: 50%;
-}
-
-button img {
-  width: 20px;
-}
-
-button:hover {
-  cursor: pointer;
-}
-
-footer {
-  margin: 30px auto;
-  width: 75%;
-  padding: 10px;
-  border-radius: 15px;
-  background-color: #001233;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  text-align: center;
-}
-
-footer p {
-  color: white;
-  font-weight: bold;
-}
-
+/*scroll button*/
 #scrollBtn {
   position: fixed;
   bottom: 30px;
@@ -378,6 +366,8 @@ footer p {
   width: 20px;
 }
 
+
+/*notification*/
 #notif-bar {
   position: absolute;
   top: 110px;
@@ -399,6 +389,13 @@ footer p {
   height: 300px;
 }
 
+#notif-bar p {
+    margin-bottom: 10px;
+    font-weight: 400;
+    color: #5C677D;
+    font-size: 15px;
+}
+
 #notif-bar.active {
   opacity: 1;
   transform: translateY(0);
@@ -406,6 +403,8 @@ footer p {
 
 }
 
+
+/*responsive sizes*/
 @media (max-width: 1024px) {
 
   header {

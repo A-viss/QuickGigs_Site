@@ -1,3 +1,4 @@
+/*entire body*/
 body {
     margin: 0;
     padding: 0;
@@ -9,6 +10,7 @@ body {
     background-position: center;
 }
 
+/*login square*/
 #login_BG {
     width: 60%;
     height: 75%;
@@ -23,19 +25,21 @@ body {
 
 }
 
+/*ledt side of login square*/
 #left {
     width: 50%;
     height: 100%;
     position: relative;
 }
 
-
+/*left section image*/
 #left img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
+/*left elements*/
 #left_Items {
     position: absolute;
     top: 20px;
@@ -45,11 +49,13 @@ body {
     font-weight: bold;
 }
 
+/*logo*/
 #left_Items img {
     width: 50%;
     filter: drop-shadow(0 0 5px rgb(0, 0, 0));
 }
 
+/*left section list*/
 #left_Items ul {
     list-style: square;
     font-weight: 400;
@@ -58,16 +64,20 @@ body {
     filter: drop-shadow(0 0 2px rgb(0, 0, 0));
 }
 
+/*right section of login square*/
 #right {
     width: 50%;
     height: 100%;
     object-fit: cover;
 }
 
+
+/*login form*/
 form {
     padding: 20px 75px;
 }
 
+/*log in header*/
 h3 {
     font-weight: bolder;
     font-size: 20px;
@@ -88,16 +98,19 @@ input {
     margin-top: 5px;
 }
 
+/*input click*/
 input:focus {
     outline: none;
     border: 2px solid #001233;
 }
 
+/*forget password*/
 #F_P {
     font-size: 12px;
     color: #5C677D;
 }
 
+/*login button and create account button*/
 .link {
     display: inline-block;
     width: 100%;
@@ -110,6 +123,7 @@ input:focus {
     transition: background-color 0.5s;
 }
 
+/*hover changes for buttons*/
 .link:hover {
     background-color: #5C677D;
 }
@@ -128,12 +142,15 @@ input:focus {
 
 }
 
+/*hover for other logins*/
 #other_logins img:hover {
 
     border-radius: 50%;
     box-shadow: 0 0 10px #00123384;
 }
 
+
+/*new to quick gigs*/
 h5 {
     font-size: 15px;
     color: #001233;
@@ -153,6 +170,7 @@ h5 {
 }
 
 
+/*responsive sizes*/
 @media (max-width: 1024px) {
 
     #left {
@@ -168,6 +186,7 @@ h5 {
 @media (max-width: 640px) {
     form {
         padding: 10px 20px;
+        margin-bottom: 30px;
     }
 
 }

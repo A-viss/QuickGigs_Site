@@ -5,6 +5,21 @@ document.addEventListener("DOMContentLoaded", () => {
   notifBtn.addEventListener("click", (e) => {
     e.preventDefault();
     notifBar.classList.toggle("active");
+
+    // Load notifications when clicked
+    fetch("notifications.json")
+      .then(res => res.json())
+      .then(data => {
+        notifBar.innerHTML = ""; // Clear existing content
+        data.forEach(n => {
+          const p = document.createElement("p");
+          p.textContent = n.message;
+          notifBar.appendChild(p);
+        });
+      })
+      .catch(() => {
+        notifBar.innerHTML = "<p>Error loading notifications</p>";
+      });
   });
 
   document.addEventListener("click", (e) => {
@@ -13,6 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
 
 // Trigger animations when page loads
 window.addEventListener('load', function () {

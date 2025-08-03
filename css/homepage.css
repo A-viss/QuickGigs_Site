@@ -1,3 +1,4 @@
+/*entire body*/
 body {
     margin: 0;
     padding: 0;
@@ -8,6 +9,7 @@ body {
     background-attachment: fixed;
     background-position: center;
 }
+
 
 header {
     display: flex;
@@ -54,6 +56,7 @@ nav a:hover {
     transform: scale(1.1);
 }
 
+/*current active nav*/
 nav a.now {
   color: #001233;
   transform: scale(1.1);
@@ -61,6 +64,7 @@ nav a.now {
 
 
 
+/*change color of svgs*/
 #acc,
 #notif {
     width: 30px;
@@ -73,6 +77,7 @@ nav a.now {
     filter: brightness(0) saturate(100%) invert(5%) sepia(55%) saturate(4787%) hue-rotate(208deg) brightness(93%) contrast(102%);
 }
 
+/*headline parent container*/
 #headline {
     width: 58%;
     position: fixed;
@@ -82,6 +87,7 @@ nav a.now {
 
 }
 
+/*headline 1*/
 #headline h1 {
     margin-bottom: 2px;
     font-size: 50px;
@@ -89,6 +95,7 @@ nav a.now {
     filter: drop-shadow(0px 0px 10px rgb(0, 0, 0));
 }
 
+/*headline w*/
 #headline h2 {
     margin-top: 0;
     margin-bottom: 5px;
@@ -98,6 +105,7 @@ nav a.now {
 
 }
 
+/*description*/
 #headline p {
     margin-top: 0px;
     font-size: 20px;
@@ -106,6 +114,7 @@ nav a.now {
 
 }
 
+/*start button*/
 #headline a {
     display: inline-block;
     width: 20%;
@@ -124,10 +133,12 @@ nav a.now {
     transition: background-color 0.5s, color 0.5s, transform 0.5s ease;
 }
 
+
 #headline a:hover {
     transform: scale(1.1);
 }
 
+/*job categories parent container*/
 #category {
     display: flex;
     align-items: center;
@@ -138,6 +149,8 @@ nav a.now {
     gap: 50px;
 }
 
+
+/*job items*/
 .cat-item {
     display: flex;
     gap: 12px;
@@ -157,6 +170,8 @@ nav a.now {
     transform: scale(1.3);
 }
 
+
+/*notification*/
 #notif-bar {
     position: absolute;
     top: 110px;
@@ -176,6 +191,13 @@ nav a.now {
     font-weight: 500;
     width: 20%;
     height: 300px;
+}
+
+#notif-bar p {
+    margin-bottom: 10px;
+    font-weight: 400;
+    color: #5C677D;
+    font-size: 15px;
 }
 
 #notif-bar.active {
@@ -209,6 +231,7 @@ nav a.now {
     transform: translateX(0);
 }
 
+/*responsive sizes*/
 @media (max-width: 1024px) {
     header {
         flex-direction: column;

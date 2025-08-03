@@ -6,6 +6,7 @@ body {
 
 }
 
+/*header and navigation*/
 header {
     display: flex;
     align-items: center;
@@ -69,12 +70,14 @@ nav a.now {
     filter: brightness(0) saturate(100%) invert(5%) sepia(55%) saturate(4787%) hue-rotate(208deg) brightness(93%) contrast(102%);
 }
 
+/*support parent container*/
 #support {
     width: 76.5%;
     display: flex;
     gap: 2%;
 }
 
+/*faqs container*/
 #faq {
     width: 60%;
     background-color: white;
@@ -109,6 +112,8 @@ p {
     text-align: justify;
 }
 
+
+/*supprt methods parent container*/
 #methods {
     width: 38%;
     display: flex;
@@ -116,6 +121,8 @@ p {
     gap: 20px;
 }
 
+
+/*support method child container*/
 .option {
     flex: 1;
     background-color: white;
@@ -157,6 +164,8 @@ p {
     color: #086788;
 }
 
+
+/*animations*/
 .fade-right {
     opacity: 0;
     transform: translateX(100px);
@@ -180,21 +189,8 @@ p {
     transform: translateX(0);
 }
 
-button {
-    background-color: #ba324f;
-    padding: 10px 12px;
-    border: 0px;
-    border-radius: 50%;
-}
 
-button img {
-    width: 20px;
-}
-
-button:hover {
-    cursor: pointer;
-}
-
+/*scroll button*/
 #scrollBtn {
     position: fixed;
     bottom: 30px;
@@ -212,6 +208,8 @@ button:hover {
     width: 20px;
 }
 
+
+/*notification*/
 #notif-bar {
     position: absolute;
     top: 110px;
@@ -233,6 +231,14 @@ button:hover {
     height: 300px;
 }
 
+#notif-bar p {
+    margin-bottom: 10px;
+    font-weight: 400;
+    color: #5C677D;
+    font-size: 15px;
+    text-align: center;
+}
+
 #notif-bar.active {
     opacity: 1;
     transform: translateY(0);
@@ -240,6 +246,7 @@ button:hover {
 
 }
 
+/*responsive sizes*/
 @media (max-width: 1024px) {
 
     header {
@@ -272,24 +279,24 @@ button:hover {
     }
 
 
-  #support {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    gap: 20px;
-  }
+    #support {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 20px;
+    }
 
-  #faq,
-  #methods {
-    width: 75%;
-  }
+    #faq,
+    #methods {
+        width: 75%;
+    }
 
-  #methods {
-    flex-direction: row;
-    justify-content: center;
-    gap: 20px;
-    margin-bottom: 20px;
-  }
+    #methods {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 20px;
+    }
 
 
 }
